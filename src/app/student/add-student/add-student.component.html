@@ -1,0 +1,92 @@
+<!-- Main content -->
+<div class="content-wrapper">
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Add Student</h1>
+                </div><!-- /.col -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- jquery validation -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Add Student</h3>
+                        </div>
+                        <!-- /.card-header -->
+
+                        <!-- form start -->
+                        <form [formGroup]="addStudentForm">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="studentName">Full Name</label>
+                                    <input type="text" name="studentName" class="form-control"
+                                        placeholder="Enter Full Name" formControlName="studentName">
+                                    <small id="helpId" class="text-muted">Name Goes Here</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="studentUsername">Username</label>
+                                    <input type="text" name="studentUsername" class="form-control"
+                                        placeholder="Enter Username" formControlName="studentUsername">
+                                    <small id="helpId" class="text-muted">Username Goes Here</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="studentPassword">Password</label>
+                                    <input type="text" name="studentPassword" class="form-control"
+                                        placeholder="Enter Password" formControlName="studentPassword">
+                                    <small id="helpId" class="text-muted">Password Goes Here</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputStatus">City</label>
+                                    <select class="form-control custom-select" formControlName="studentCity">
+                                        <option disabled>Choose here</option>
+                                        <option *ngFor="let city of cities">{{city.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="courseName">Course</label>
+                                    <select class="form-control custom-select" formControlName="course">
+                                        <option disabled>Choose here</option>
+                                        <option *ngFor="let course of courseList" [ngValue]="course">
+                                            {{course.courseName}}</option>
+                                    </select>
+                                </div>
+                                <div class=" form-group">
+                                    <label for="studentAvatar">Avatar Image</label>
+                                    <input type="text" name="studentAvatar" id="studentAvatar" class="form-control"
+                                        placeholder="Enter Avatar Image URL" formControlName="studentAvatar">
+                                    <small id=" helpId" class="text-muted">Profile Avatar URL Goes Here</small>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary" (click)="addStudent()">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!--/.col (left) -->
+                <!-- right column -->
+                <div class="col-md-6">
+
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

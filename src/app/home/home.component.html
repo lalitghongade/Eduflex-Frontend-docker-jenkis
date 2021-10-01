@@ -1,0 +1,83 @@
+<div *ngIf="isHod">
+    <!-- App Header -->
+    <app-header></app-header>
+    <!-- App Header Ends Here -->
+
+    <!-- If HOD is Logged In -->
+    <!-- Hod Sidebar -->
+
+    <app-hod-sidebar></app-hod-sidebar>
+    <!-- Hod Sidebar Ends Here -->
+
+    <!-- If Student is Logged In -->
+    <!-- Student Sidebar -->
+    <!-- <app-student-sidebar></app-student-sidebar> -->
+    <!-- Student Sidebar Ends Here -->
+
+    <!-- If HOD is Logged In -->
+    <!-- Student Sidebar -->
+    <!-- <app-faculty-sidebar></app-faculty-sidebar> -->
+    <!-- Student Sidebar Ends Here -->
+
+    <router-outlet></router-outlet>
+
+    <!-- App Footer -->
+    <app-footer></app-footer>
+    <!-- App Footer Ends Here -->
+</div>
+
+<div *ngIf="isFaculty">
+    <!-- App Header -->
+    <app-header></app-header>
+    <!-- App Header Ends Here -->
+
+    <!-- If HOD is Logged In -->
+    <!-- Hod Sidebar -->
+
+    <!-- <app-hod-sidebar></app-hod-sidebar> -->
+    <!-- Hod Sidebar Ends Here -->
+
+    <!-- If Student is Logged In -->
+    <!-- Student Sidebar -->
+    <!-- <app-student-sidebar></app-student-sidebar> -->
+    <!-- Student Sidebar Ends Here -->
+
+    <!-- If HOD is Logged In -->
+    <!-- Student Sidebar -->
+    <app-faculty-sidebar></app-faculty-sidebar>
+    <!-- Student Sidebar Ends Here -->
+
+    <router-outlet></router-outlet>
+
+    <!-- App Footer -->
+    <app-footer></app-footer>
+    <!-- App Footer Ends Here -->
+</div>
+
+<div *ngIf="isStudent">
+    <!-- App Header -->
+    <app-header></app-header>
+    <!-- App Header Ends Here -->
+
+    <!-- If HOD is Logged In -->
+    <!-- Hod Sidebar -->
+
+    <!-- <app-hod-sidebar></app-hod-sidebar> -->
+    <!-- Hod Sidebar Ends Here -->
+
+    <!-- If Student is Logged In -->
+    <!-- Student Sidebar -->
+    <app-student-sidebar></app-student-sidebar>
+    <!-- Student Sidebar Ends Here -->
+
+    <!-- If HOD is Logged In -->
+    <!-- Student Sidebar -->
+    <!-- <app-faculty-sidebar></app-faculty-sidebar> -->
+    <!-- Student Sidebar Ends Here -->
+
+    <router-outlet></router-outlet>
+
+    <!-- App Footer -->
+    <app-footer></app-footer>
+    <!-- App Footer Ends Here -->
+</div>

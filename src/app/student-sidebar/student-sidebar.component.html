@@ -1,0 +1,82 @@
+<div class="wrapper">
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a routerLink="/home/student-dashboard" class="brand-link">
+            <img src="https://user-images.githubusercontent.com/42808213/134984393-da7b40a0-f399-43fa-8882-94f559b7096e.png"
+                alt="Eduflex Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">EduFlex</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img [src]="student.studentAvatar" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block">{{student.studentName}}</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                    data-accordion="false">
+                    <li class="nav-item">
+                        <a routerLink="/home/student-dashboard" routerLinkActive="active" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-header">FACULTY</li>
+                    <li class="nav-item">
+                        <a routerLinkActive="active" class="nav-link">
+                            <i class="nav-icon fas fa-chalkboard-teacher"> </i>
+                            <p>
+                                View Attendance
+                                <!-- <span class="badge badge-info right">2</span> -->
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLinkActive="active" class="nav-link">
+                            <i class="nav-icon fas fa-plus-circle"></i>
+                            <p>
+                                View Result
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a routerLink="/home/apply-student-leave" routerLinkActive="active" class="nav-link">
+                            <i class="nav-icon fas fa-door-open"></i>
+                            <p>
+                                Apply Leave
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a routerLink="/home/add-student-feedback" routerLinkActive="active" class="nav-link">
+                            <i class="nav-icon fas fa-envelope"></i>
+                            <p>
+                                Apply Feedback
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-header"></li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+
+    <!-- /.content-wrapper -->
+</div>
+<!-- ./wrapper -->
