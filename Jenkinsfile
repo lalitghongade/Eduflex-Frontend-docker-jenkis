@@ -4,7 +4,7 @@ pipeline {
     
     stage('Clean') {
             steps {
-             sh 'docker-compose down -d'
+             
              sh 'docker rmi $(docker images -a -q)'
              sh 'docker rm $(docker ps -a -f status=exited -q)'
 
