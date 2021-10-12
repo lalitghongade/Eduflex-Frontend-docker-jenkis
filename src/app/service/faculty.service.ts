@@ -10,7 +10,7 @@ export class FacultyService {
   facultyUrl: string
 
   constructor(private http: HttpClient) { 
-    this.facultyUrl = 'http://localhost:2020/faculty'
+    this.facultyUrl = 'http://54.146.205.172:2020/faculty'
   }
 
   public addFaculty(faculty: Faculty): Observable<Faculty> {
@@ -22,7 +22,7 @@ export class FacultyService {
   }
 
   public getAllFaculties(): Observable<Faculty[]> {
-    return this.http.get<Faculty[]>('http://localhost:2020/faculties');
+    return this.http.get<Faculty[]>('http://54.146.205.172:2020/faculties');
   }
 
   public deleteFaculty(facultyId: number) {

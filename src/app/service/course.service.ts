@@ -11,7 +11,7 @@ export class CourseService {
   courseAPI: string;
 
   constructor(private http: HttpClient) { 
-    this.courseAPI = 'http://localhost:2020/course';
+    this.courseAPI = 'http://54.146.205.172:2020/course';
   }
 
   public addCourse(course: Course): Observable<Course> {

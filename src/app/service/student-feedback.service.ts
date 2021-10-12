@@ -11,7 +11,7 @@ export class StudentFeedbackService {
   studentFeedbackUrl: string
 
   constructor(private http: HttpClient) { 
-    this.studentFeedbackUrl = 'http://localhost:2020/student'
+    this.studentFeedbackUrl = 'http://54.146.205.172:2020/student'
   }
   
   public addStudentFeedbackToStudent(studentId: number, studentFeedback: StudentFeedback): Observable<StudentFeedback> {
@@ -27,7 +27,7 @@ export class StudentFeedbackService {
   }
 
   public getAllStudentFeedbacks(): Observable<StudentFeedback[]> {
-    return this.http.get<StudentFeedback[]>('http://localhost:2020/studentFeedbacks')
+    return this.http.get<StudentFeedback[]>('http://54.146.205.172:2020/studentFeedbacks')
   }
   
 

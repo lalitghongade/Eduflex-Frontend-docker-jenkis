@@ -8,7 +8,7 @@ export class ResultService {
   resultUrl: string
 
   constructor() {
-    this.resultUrl = 'http://localhost:2020/student'
+    this.resultUrl = 'http://54.146.205.172:2020/student'
    }
 
    

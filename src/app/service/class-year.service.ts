@@ -11,7 +11,7 @@ export class ClassYearService {
   classYearUrl: string
 
   constructor(private http: HttpClient) { 
-    this.classYearUrl = 'http://localhost:2020/classYear'
+    this.classYearUrl = 'http://54.146.205.172:2020/classYear'
   }
 
   public addClassYear(classYear: ClassYear): Observable<ClassYear> {

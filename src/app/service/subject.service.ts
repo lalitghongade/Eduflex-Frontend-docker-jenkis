@@ -11,7 +11,7 @@ export class SubjectService {
   subjectUrl:string
 
   constructor(private http: HttpClient) {
-    this.subjectUrl = 'http://localhost:2020/subject'
+    this.subjectUrl = 'http://54.146.205.172:2020/subject'
    }
 
   public addSubject(subject: Subject): Observable<Subject> {

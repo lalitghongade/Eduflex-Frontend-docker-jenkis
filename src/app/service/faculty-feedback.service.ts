@@ -11,7 +11,7 @@ export class FacultyFeedbackService {
   facultyFeedbackUrl: string
 
   constructor(private http: HttpClient) { 
-    this.facultyFeedbackUrl = 'http://localhost:2020/faculty'
+    this.facultyFeedbackUrl = 'http://54.146.205.172:2020/faculty'
   }
   
   public addFacultyFeedbackToFaculty(facultyId: number, facultyFeedback: FacultyFeedback): Observable<FacultyFeedback> {
@@ -27,7 +27,7 @@ export class FacultyFeedbackService {
   }
 
   public getAllFacultyFeedbacks(): Observable<FacultyFeedback[]> {
-    return this.http.get<FacultyFeedback[]>('http://localhost:2020/facultyFeedbacks')
+    return this.http.get<FacultyFeedback[]>('http://54.146.205.172:2020/facultyFeedbacks')
   }
 
   public  deleteFacultyFeedbackByFacultyFeedbackId(facultyFeedbackId: number) {
