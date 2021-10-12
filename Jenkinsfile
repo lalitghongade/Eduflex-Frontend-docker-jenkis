@@ -2,14 +2,7 @@ pipeline {
     agent any
     stages {
     
-    stage('Clean') {
-            steps {
-             
-             sh 'docker rmi $(docker images -a -q)'
-             sh 'docker rm $(docker ps -a -f status=exited -q)'
-
-            }
-        }
+   
     
        stage('Build Docker image'){
             steps {
