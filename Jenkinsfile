@@ -11,14 +11,12 @@ pipeline {
             }
         }
     
-        
-       stage('Staging') {
+       stage('Build Docker image'){
             steps {
-                sh "docker-compose build"
-                sh "docker-compose up -d"
+
+                sh 'docker build -t  lala14/eduflex-frontend .'
             }
         }
-
 
         stage('Docker Login'){
 
@@ -31,8 +29,21 @@ pipeline {
 
         stage('Docker Push'){
             steps {
-                sh 'docker push lala14/eduflex-backend'
                 sh 'docker push lala14/eduflex-frontend'
+            }
+        }
+
+        stage('Docker deploy'){
+            steps {
+                sh 'docker kill $(docker ps -q)'
+                sh 'docker run -itd -p  4200:4200 lala14/eduflex-frontend'
+            }
+        }
+
+
+        stage('Archving') {
+            steps {
+                 archiveArtifacts '**/target/*.jar'
             }
         }
 
